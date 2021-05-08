@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				margin: 0 auto;
+			}
+			.bg{
+				margin: 100px auto;
+				width: 500px;
+				height: 500px;
+				border: 1px solid #000000;
+				position: relative;
+				border-radius: 50%;
+				overflow: hidden;
+			}
+			.bg::after{
+				content: "";
+				display: inline-block;
+				width: 250px;
+				height: 500px;
+				position: absolute;
+				right: 0;
+				top: 0;
+				
+			}
+			.bg::before{
+				content: "";
+				display: inline-block;
+				width: 250px;
+				height: 500px;
+				position: absolute;
+				background-color: #000000;
+				left: 0;
+				top: 0;
+			}
+		 	.top{
+				width: 250px;
+				height: 250px;
+				background-color: #000000;
+				border-radius: 50%;
+				position: absolute;
+				top: 0;
+				left: 125px;
+			}
+			.top::after{
+				content: "";
+				width: 50px;
+				height: 50px;
+				background-color: #fff;
+				left: 100px;
+				top: 100px;
+				border-radius: 50%;
+				position: absolute;
+			}
+			.bottom{
+				width: 250px;
+				height: 250px;
+				background-color: #fff; 
+				position: absolute;
+				bottom: 0;
+				left: 125px;
+				border-radius: 50%; 
+			}
+			.bottom::after{
+				content: "";
+				width: 50px;
+				height: 50px;
+				background-color: #000000;
+				left: 100px;
+				top: 100px;
+				border-radius: 50%;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="bg">
+			<div class="top"></div>
+			<div class="bottom"></div>
+		</div>
+	</body>
+</html>

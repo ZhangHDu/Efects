@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        html,body{
+            height: 100%;
+        }
+        body{
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding-top: 1px;
+            box-sizing: border-box;
+            background-size: 50px 50px;
+            background-position-x: 12px;
+            background-position-y: 5px;
+            overflow: hidden;
+            background-image: linear-gradient(90deg,rgba(11,89,26,.5) 0px,rgba(11,89,26,.5) 1px,rgba(0,0,0,.5) 1px,rgba(0,0,0,.5) 49px,rgba(11,89,26,.5) 49px,rgba(11,89,26,.5) 50px),
+                                linear-gradient(#0B591A 0px,#0B591A 1px,#000 1px,#000 49px,#0B591A 49px,#0B591A 50px);
+        }
+        .content{
+            margin: 50px auto;
+            width: 800px;
+            height: 800px;
+            border: 2px solid #1EEA47;
+            border-radius: 50%;
+            position: relative;
+            background-image: radial-gradient(300px,rgba(30,234,71, .3),transparent);
+        }
+        .content::before{
+            content: "";
+            position: absolute;
+            width: 400px;
+            height: 800px;
+            border: 2px solid transparent;
+            border-right: 2px solid #1EEA47;
+        }
+        .content::after{
+            content: "";
+            position: absolute;
+            width: 800px;
+            height: 400px;
+            border: 2px solid transparent;
+            border-bottom: 2px solid #1EEA47;
+        }
+        .one{
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            border: 2px solid #1EEA47;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+        }
+        .two{
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            border: 2px solid #1EEA47;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+        }
+        .tree{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 2px solid #1EEA47;
+            position: absolute;
+            top: 146px;
+            left: 146px;
+        }
+      .sm{
+          position: absolute;
+          /* border-radius: 50%; */
+          width: 804px;
+          height: 804px;
+             /* border: 1px solid #fff; */
+             animation: zzz 5s linear infinite;
+
+      }
+      .sm::before{
+          content: "";
+          position: absolute;
+          width: 400px;
+          height: 400px;
+          /* border: 1px solid #fff; */
+        background-image: linear-gradient(45deg,rgba(30,234,71, 1),transparent 50%);
+        border-top-left-radius: 100%;
+      }
+      .sm::after{
+          content: "";
+          position: absolute;
+          width: 400px;
+          height: 400px;
+          /* border: 1px solid #fff; */
+         animation: light 1s linear 0s infinite alternate;
+      background-image: radial-gradient(20px,#1EEA47 8px,transparent);
+        border-top-left-radius: 100%;
+      }
+      @keyframes light{
+          0%{
+              opacity: 0;
+             
+          }100%{
+              opacity: 1;
+            
+          }
+      }
+      @keyframes zzz{
+          0%{
+              transform: rotate(0deg);
+          }100%{
+              transform: rotate(-360deg);
+          }
+      }
+    </style>
+</head>
+<body>
+        <div class="content">
+            <div class="one">
+                <div class="two">
+                    <div class="tree">
+                      
+                    </div>
+                </div>
+            </div>
+            <div class="sm"></div>
+        </div>
+</body>
+</html>

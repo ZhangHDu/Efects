@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.cdr{
+				margin: 200px auto;
+				width: 0px;
+				height: 0px;
+				border-top: 160px solid tomato;
+				border-left: 160px solid tomato;
+				border-right: 160px solid transparent;
+				border-bottom: 160px solid tomato;
+				border-radius: 50%;
+				position: relative;
+			}
+			.cdr::before{
+				content: "";
+				width: 40px;
+				height: 40px;
+				background-color: #fff;
+				position: absolute;
+				border-radius: 50%;
+				top:-100px;
+				left:-40px;
+			}
+			.cdr::after{
+				content: "";
+				width: 40px;
+				height: 40px;
+				background-color: #eeff2e;
+				position: absolute;
+				border-radius: 50%;
+				top: -20px;
+				left: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="cdr"></div>
+	</body>
+</html>

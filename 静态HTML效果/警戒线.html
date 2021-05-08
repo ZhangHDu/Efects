@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			div{
+				position: relative;
+				margin: 200px auto;
+				width: 520px;
+				height: 67px;
+				background-image: linear-gradient(-50deg,#ffff00 0%,#ffff00 5%,#000 5%,#000 10%,#ffff00 10%,#ffff00 15%,#000 15%,#000 20%,#ffff00 20%,#ffff00 25%,#000 25%,#000 30%,#ffff00 30%,#ffff00 35%,#000 35%,#000 40%,#ffff00 40%,#ffff00 45%,#000 45%,#000 50%,#ffff00 50%,#ffff00 55%,#000 55%,#000 60%,#ffff00 60%,#ffff00 65%,#000 65%,#000 70%,#ffff00 70%,#ffff00 75%,#000 75%,#000 80%,#ffff00 80%,#ffff00 85%,#000 85%,#000 90%,#ffff00 90%,#ffff00 95%,#000 95%,#000 100%);
+			}
+			div::after{
+				content: "";
+				position: absolute;
+				top: -15px;
+				bottom: -15px;
+				right: -15px;
+				left: -15px;
+				background: linear-gradient(-130deg,#ffff00 0%,#ffff00 5%,#000 5%,#000 10%,#ffff00 10%,#ffff00 15%,#000 15%,#000 20%,#ffff00 20%,#ffff00 25%,#000 25%,#000 30%,#ffff00 30%,#ffff00 35%,#000 35%,#000 40%,#ffff00 40%,#ffff00 45%,#000 45%,#000 50%,#ffff00 50%,#ffff00 55%,#000 55%,#000 60%,#ffff00 60%,#ffff00 65%,#000 65%,#000 70%,#ffff00 70%,#ffff00 75%,#000 75%,#000 80%,#ffff00 80%,#ffff00 85%,#000 85%,#000 90%,#ffff00 90%,#ffff00 95%,#000 95%,#000 100%);
+				z-index: -1;
+				
+			}
+			div:hover::after{
+				animation: go2 linear 5s infinite;
+			}
+			div:hover{
+				animation: go linear 15s infinite;
+			}
+			@keyframes go{
+				100%{
+					background-position: -1000px 0;
+				}
+			}
+			@keyframes go2{
+				100%{
+					background-position: 1000px 0;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+	</body>
+</html>

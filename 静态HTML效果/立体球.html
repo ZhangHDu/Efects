@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				margin: 0;
+				background-color: #ffffff;
+			}
+			.qiu{
+				margin: 100px auto;
+				width: 500px;
+				height: 500px;
+				border-radius: 50%;
+				box-shadow: -20px -20px 20px #000000 inset; 
+				position: relative;
+				background-color: #fff;
+				
+			}
+			.qiu::after{
+				content: "";
+				position: absolute;
+				bottom: -100px;
+				right: -200px;
+				width: 600px;
+				height: 200px;
+				border-radius: 50%;
+				z-index: -1;
+				background-color: #000000;
+				box-shadow: 0 0 20px #000000;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="qiu">
+			
+		</div>
+	</body>
+</html>
