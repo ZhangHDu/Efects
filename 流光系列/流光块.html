@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				margin: 0;
+				padding: 0;
+				background-color: #000000;
+			}
+			a{	
+				width: 300px;
+				height: 100px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				text-decoration: none;
+				line-height: 100px;
+				text-align: center;
+				font-size: 60px;
+				color: #fff;
+				transform: translate(-50%,-50%);
+				background: linear-gradient(90deg, #1c64ff ,#d91dca ,#e56727 ,#2fff40 ,#1c64ff);
+				background-size: 400%;
+				z-index: 1;
+			}
+			a::before{
+				content: "";
+				position: absolute;
+				top: -5px;
+				left: -5px;
+				bottom: -5px;
+				right: -5px;
+				background: linear-gradient(90deg, #1c64ff ,#d91dca ,#e56727 ,#2fff40 ,#1c64ff);
+				background-size: 400%;
+				z-index: -1;
+				filter: blur(20px);
+			}
+			a:hover::before{
+				animation: Light 4s infinite;
+			}
+			a:hover{
+				animation: Light 4s infinite;
+			}
+			@keyframes Light{
+				100%{
+					background-position: -400% 0;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<a href="#">Light</a>
+	</body>
+</html>

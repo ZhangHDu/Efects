@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				background-color: #000000;
+			}
+			a{	
+				text-decoration: none;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				font-size: 50px;
+				transform: translate(-50%,-50%);
+				width: 600px;
+				height: 600px;
+				border-radius: 50%;
+				background: repeating-linear-gradient(-90deg, #1c64ff ,#d91dca ,#e56727,#d9ee1c ,#2fff40 ,#1c64ff);
+				background-size: 400%;
+				z-index: 2;
+			}
+			a::before{
+				content: "";
+				position: absolute;
+				top: -5px;
+				bottom: -5px;
+				left: -5px;
+				right: -5px;
+				border-radius: 50%;
+				background: linear-gradient(-90deg, #1c64ff ,#d91dca ,#e56727,#d9ee1c ,#2fff40 ,#1c64ff);
+				background-size: 400%;
+				filter: blur(30px);
+				z-index: 1;
+			}
+			a:link::before{
+				animation: sun 8s infinite;
+			}
+			a:link{
+				animation: sun 8s infinite;
+			}
+			@keyframes sun{
+				100%{
+					background-position: -400% 0;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<a href="#"></a>
+	</body>
+</html>
