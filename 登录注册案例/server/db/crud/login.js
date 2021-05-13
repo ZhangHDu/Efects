@@ -5,5 +5,8 @@ function findUser(name,password){
         password,
     })
 }
+function findUserById(_id){
+    return userModel.findOne({_id})
+}
 module.exports.findUser = findUser
-
+module.exports.findUserById = findUserById

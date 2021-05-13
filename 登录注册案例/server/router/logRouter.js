@@ -3,6 +3,7 @@ const express = require('express')
 const {registerUser} = require('../db/crud/register')
 //引入查找用户信息的方法
 const {findUser} = require('../db/crud/login')
+
 //创建路由器对象
 const router = express.Router()
 //处理注册逻辑
@@ -24,7 +25,18 @@ router.post('/login',async (req,res)=>{
     const user = await findUser(username,password)
     if(user){
         //成功
-        res.redirect('http://127.0.0.1:5000/home')
+        //登录成功之后，给浏览器发送小卡片
+        //这行代码其实就是修改了响应头
+        // res.cookie('userId',user._id,{maxAge:1000*60})
+
+         // 登录成功之后,要将用户id,存储到session中
+        // 这行代码做的事情:
+        // 1. 在session中开辟空间,存储用户id
+        // 2. 生成了一个sessionid
+        // 3. 在响应头中添加一个set-cookie.让浏览器将sessionid存到cookie中
+        req.session.userId = user._id
+        //重定向的地址添加查询字符串，这样进入主页之后id会显示在地址栏
+        res.redirect('http://127.0.0.1:5000/home?_id='+user._id)
     }else{
         //失败
         res.send('登陆失败！')
